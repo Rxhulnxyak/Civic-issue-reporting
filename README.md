@@ -65,7 +65,7 @@ graph TD
 ```bash
 .
 ├── civic_issue_app/        # Flutter Mobile Application
-├── web_app/                # Next.js Web Application (nested inside Crowdsourced-...)
+├── web_app/                # Next.js Web Application
 ├── assets/                 # Brand assets and images
 └── database_schema.sql     # Unified database schema
 ```
@@ -81,7 +81,7 @@ graph TD
 
 ### 2. Web App Setup
 ```bash
-cd Crowdsourced-Civic-lssue-Reporting-and-Resolution-System-main
+cd web_app
 npm install
 cp .env.example .env.local
 # Add your Clerk and Supabase keys
