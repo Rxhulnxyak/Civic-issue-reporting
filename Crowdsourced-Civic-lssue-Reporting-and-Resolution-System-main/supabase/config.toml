@@ -1,0 +1,3 @@
+[auth.third_party.clerk]
+enabled = true
+domain = "nearb-redfish-52.clerk.accounts.dev"
