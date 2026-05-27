@@ -75,7 +75,7 @@ const priorityColors = {
 
 export default function VerifyIssuesPage() {
   const [statusFilter, setStatusFilter] = useState<string>("all")
-  const [selectedIssue, setSelectedIssue] = useState<string | null>(null)
+
 
   const filteredIssues = verifiedIssues.filter((issue) => statusFilter === "all" || issue.status === statusFilter)
 

@@ -52,6 +52,7 @@ const AnimatedGreeting = () => (
 );
 
 export default function CivicReportingLanding() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {

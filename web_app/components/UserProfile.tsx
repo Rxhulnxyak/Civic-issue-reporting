@@ -13,6 +13,7 @@ import { CheckCircle, XCircle, Loader2, User, Mail, Phone, Calendar, Edit2 } fro
 export function UserProfile() {
   // Clerk is disabled in this local setup. Stub minimal user state.
   const isLoaded = true
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const user = undefined as unknown as any
   const syncStatus = useUserSync()
   const [isEditingUsername, setIsEditingUsername] = useState(false)
