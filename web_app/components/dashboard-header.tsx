@@ -21,8 +21,8 @@ interface DashboardHeaderProps {
 export function DashboardHeader({ onMenuClick }: DashboardHeaderProps) {
   const isHead = true
   const department = "Public Works Department"
-  const officerName = "Rajesh Kumar"
-  const officerEmail = "rajesh.kumar@pwd.gov.in"
+  const officerName = "Rahul"
+  const officerEmail = "rahul@pwd.gov.in"
 
   return (
     <header className="bg-background border-b px-4 md:px-6 py-3 md:py-4">
@@ -81,7 +81,7 @@ export function DashboardHeader({ onMenuClick }: DashboardHeaderProps) {
     alt="Profile"
     style={{ transform: "scale(1.18)" }}
   />
-  <AvatarFallback>RK</AvatarFallback>
+  <AvatarFallback>R</AvatarFallback>
 </Avatar>
                 {isHead && (
                   <Badge className="absolute -top-1 -right-1 w-4 h-4 p-0 flex items-center justify-center bg-primary text-primary-foreground">

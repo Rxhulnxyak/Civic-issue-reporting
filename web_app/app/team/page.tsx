@@ -15,7 +15,7 @@ export default function TeamPage() {
     const mq = window.matchMedia("(min-width: 1024px)");
     setIsDesktop(mq.matches);
     if (!mq.matches) {
-      
+
       setShowMain(true);
     }
     const handler = (e: MediaQueryListEvent) => {
@@ -39,7 +39,7 @@ export default function TeamPage() {
     <>
       <Hero
         title="Where Ingenuity Meets Gravity"
-        tagline="Building digital solutions for real-world challenges in Jharkhand"
+        tagline="Building digital solutions for real-world challenges in Karnataka"
         microStory={`In this orbit of ideas, We're a team of developers, designers, and problem-solvers working on innovative tech solutions for government services. From concept to deployment, we focus on creating tools that actually work for citizens.
 
 `}

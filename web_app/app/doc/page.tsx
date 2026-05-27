@@ -100,7 +100,7 @@ export default function DocPage() {
           Kindly see the{" "}
           <a
             className="github-link"
-            href="https://github.com/TheRaj71/Crowdsourced-Civic-lssue-Reporting-and-Resolution-System/issues"
+            href="https://github.com/Rxhulnxyak/Civic-issue-reporting"
             target="_blank"
             rel="noopener noreferrer"
           >

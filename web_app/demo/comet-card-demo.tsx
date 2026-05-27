@@ -7,38 +7,16 @@ import { Instagram } from "lucide-react";
 const teamRows = [
   [
     {
-      name: "The Raj",
+      name: "Rahul",
       img: "/Raj.jpeg",
-      socials: { instagram: "https://www.instagram.com/theraj7171", linkedin: "https://www.linkedin.com/in/the-raj71", github: "https://github.com/TheRaj71" }
-    },
-    {
-      name: "Rishav Raj",
-      img: "/Rishav.jpeg",
-      socials: { instagram: "#", linkedin: "#", github: "#" }
+      socials: { 
+        instagram: "https://www.instagram.com/ft.rahull19?igsh=ZWFycDdzYWtpOTN4", 
+        linkedin: "https://www.linkedin.com/in/rahul-d-6b3651296?utm_source=share_via&utm_content=profile&utm_medium=member_android", 
+        github: "https://github.com/Rxhulnxyak" 
+      }
     }
   ],
-  [
-    {
-      name: "Parth Patidar",
-      img: "https://images.unsplash.com/photo-1640951613773-54706e06851d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      socials: { instagram: "#", linkedin: "#", github: "#" }
-    },
-    {
-      name: "Kavita Panwar",
-      img: "/kavita.jpeg",
-      socials: { instagram: "#", linkedin: "#", github: "#" }
-    },
-    {
-      name: "Sudhir Singh",
-      img: "https://images.unsplash.com/photo-1640951613773-54706e06851d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      socials: { instagram: "#", linkedin: "#", github: "#" }
-    },
-    {
-      name: "Anurag Anand",
-      img: "https://images.unsplash.com/photo-1640951613773-54706e06851d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      socials: { instagram: "#", linkedin: "#", github: "#" }
-    }
-  ]
+  []
 ];
 
 export default function CometCardDemo() {

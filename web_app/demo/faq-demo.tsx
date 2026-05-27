@@ -17,17 +17,17 @@ const FAQDemo: React.FC = () => {
       {
         question: "What is the Civic Issue Reporting System?",
         answer:
-          "This is a digital platform developed for Jharkhand government that allows citizens to report civic issues like broken streetlights, potholes, water logging, garbage collection problems, and other public infrastructure issues directly to the concerned authorities."
+          "This is a digital platform developed for Karnataka government that allows citizens to report civic issues like broken streetlights, potholes, water logging, garbage collection problems, and other public infrastructure issues directly to the concerned authorities."
       },
       {
         question: "Who can use this system to report issues?",
         answer:
-          "Any citizen of Jharkhand can use this system. You need to register with a valid mobile number and basic details. No special qualifications or technical knowledge is required to report issues."
+          "Any citizen of Karnataka can use this system. You need to register with a valid mobile number and basic details. No special qualifications or technical knowledge is required to report issues."
       },
       {
         question: "Is there any fee to use this service?",
         answer:
-          "No, this service is completely free for all citizens. The platform is funded by the Government of Jharkhand to improve public services and civic infrastructure."
+          "No, this service is completely free for all citizens. The platform is funded by the Government of Karnataka to improve public services and civic infrastructure."
       },
       {
         question: "What types of civic issues can I report?",

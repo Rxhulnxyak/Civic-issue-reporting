@@ -55,6 +55,7 @@ export const TestimonialShowcase: React.FC<TestimonialShowcaseProps> = ({
         clearInterval(autoPlayRef.current);
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeIndex, isHovered, autoPlayInterval, testimonials.length]);
 
   const switchTestimonial = (newIndex: number) => {

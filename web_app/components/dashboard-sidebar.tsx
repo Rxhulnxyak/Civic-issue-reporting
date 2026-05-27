@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { Home, AlertTriangle, CheckCircle, FileCheck, BarChart3, Users, Settings, UserPlus, Shield, Globe } from "lucide-react"
+import { Home, AlertTriangle, CheckCircle, FileCheck, BarChart3, Users, Settings, UserPlus, Shield } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -32,7 +32,6 @@ export function DashboardSidebar({
   onNavigate,
   currentPage = "/",
   sidebarOpen = false,
-  setSidebarOpen,
 }: DashboardSidebarProps) {
   const isHead = true
 

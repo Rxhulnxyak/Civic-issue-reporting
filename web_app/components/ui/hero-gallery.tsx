@@ -46,7 +46,7 @@ const galleryItems: GalleryItem[] = [
 ];
 
 export default function HeroGallery() {
-  const heroRef = useRef<HTMLDivElement>(null);
+  // const heroRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -68,7 +68,7 @@ export default function HeroGallery() {
     });
 
     // Set up hover animations for each card
-    cards.forEach((card, index) => {
+    cards.forEach((card) => {
       if (!card) return;
 
       const image = card.querySelector('.hero-card-image');
