@@ -14,18 +14,17 @@ const navigation = [
   { name: "Analytics", href: "/analytics", icon: BarChart3 },
   { name: "Department Team", href: "/teams", icon: Users },
   { name: "Settings", href: "/settings", icon: Settings },
-]
+];
 
 const headOnlyNavigation = [
   { name: "Add Junior Officer", href: "/add-officer", icon: UserPlus },
   { name: "Department Admin", href: "/admin", icon: Shield },
-]
+];
 
 interface DashboardSidebarProps {
   onNavigate?: (href: string) => void
   currentPage?: string
   sidebarOpen?: boolean
-  setSidebarOpen?: (open: boolean) => void
 }
 
 export function DashboardSidebar({
@@ -33,72 +32,55 @@ export function DashboardSidebar({
   currentPage = "/",
   sidebarOpen = false,
 }: DashboardSidebarProps) {
-  const isHead = true
-
   return (
-    <div
+    <aside
       className={cn(
-        "fixed left-0 top-0 h-screen bg-background border-r flex flex-col transition-all duration-300 z-40",
-        "w-64 md:translate-x-0",
-        sidebarOpen ? "translate-x-0" : "-translate-x-full",
+        "fixed inset-y-0 left-0 z-10 w-64 transform overflow-y-auto bg-white dark:bg-gray-900 p-4 transition-transform duration-300",
+        sidebarOpen ? "translate-x-0" : "-translate-x-full"
       )}
     >
-      <div className="p-4 border-b">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-            <Image src="/menulogo.png" alt="jansetu logo" width={32} height={32} />
-          </div>
-          <Link
-            href="/"
-            className="font-semibold text-foreground bg-transparent border-none p-0 m-0 cursor-pointer"
-            style={{ background: "none" }}
-            tabIndex={0}
-            aria-label="Go to Home"
-          >
-            जनसेतु
-          </Link>
-        </div>
+      <div className="flex items-center mb-6">
+        <Image src="/logo.png" alt="Logo" width={40} height={40} />
+        <h2 className="ml-2 text-xl font-semibold text-gray-800 dark:text-gray-100">
+          Civic Issues
+        </h2>
       </div>
-
-      <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
-        {navigation.map((item) => {
-          const Icon = item.icon
-          const isActive = currentPage === item.href
-          return (
-            <Button
-              key={item.name}
-              variant={isActive ? "default" : "ghost"}
-              className="w-full justify-start px-3"
-              onClick={() => onNavigate?.(item.href)}
-            >
-              <Icon className="w-4 h-4 mr-3" />
-              <span>{item.name}</span>
-            </Button>
-          )
-        })}
-
-        {isHead && (
-          <>
-            <div className="pt-4 pb-2">
-              <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider px-2">Head Privileges</p>
-            </div>
-            {headOnlyNavigation.map((item) => {
-              const Icon = item.icon
-              return (
-                <Button
-                  key={item.name}
-                  variant="ghost"
-                  className="w-full justify-start px-3 text-muted-foreground hover:text-foreground"
-                  onClick={() => onNavigate?.(item.href)}
-                >
-                  <Icon className="w-4 h-4 mr-3" />
-                  <span>{item.name}</span>
-                </Button>
-              )
-            })}
-          </>
-        )}
+      <nav>
+        {navigation.map((item) => (
+          <Link
+            key={item.name}
+            href={item.href}
+            onClick={() => {
+              onNavigate?.(item.href);
+            }}
+            className={cn(
+              "flex items-center p-2 rounded-md my-1 hover:bg-gray-200 dark:hover:bg-gray-800",
+              currentPage === item.href && "bg-gray-200 dark:bg-gray-800 font-medium"
+            )}
+          >
+            <item.icon className="mr-2 h-5 w-5" />
+            {item.name}
+          </Link>
+        ))}
+        <hr className="my-4 border-gray-300 dark:border-gray-600" />
+        {headOnlyNavigation.map((item) => (
+          <Link
+            key={item.name}
+            href={item.href}
+            onClick={() => {
+              onNavigate?.(item.href);
+            }}
+            className={cn(
+              "flex items-center p-2 rounded-md my-1 hover:bg-gray-200 dark:hover:bg-gray-800",
+              currentPage === item.href && "bg-gray-200 dark:bg-gray-800 font-medium"
+            )}
+          >
+            <item.icon className="mr-2 h-5 w-5" />
+            {item.name}
+          </Link>
+        ))}
       </nav>
-    </div>
-  )
+    </aside>
+  );
 }
+

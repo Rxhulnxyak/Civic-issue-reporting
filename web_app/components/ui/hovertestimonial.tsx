@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
@@ -58,7 +58,7 @@ export const TestimonialShowcase: React.FC<TestimonialShowcaseProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeIndex, isHovered, autoPlayInterval, testimonials.length]);
 
-  const switchTestimonial = (newIndex: number) => {
+  const switchTestimonial = useCallback((newIndex: number) => {
     if (newIndex === activeIndex || isAnimating) return;
     
     setIsAnimating(true);
@@ -68,7 +68,7 @@ export const TestimonialShowcase: React.FC<TestimonialShowcaseProps> = ({
         setIsAnimating(false);
       }, 100);
     }, 200);
-  };
+  }, [activeIndex, isAnimating]);
 
   // Track mouse position for glow effect
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
